@@ -1,0 +1,122 @@
+body {
+    background-color:burlywood;
+    font-family:'Times New Roman', Times, serif;
+    margin:0;
+    padding:0;
+}
+
+.container {
+    position: relative; /* Creates a stacking context for the square */
+    width: 100%;
+    height: 20vh; /* Ensures the container covers the full viewport height */
+}
+
+h1 {
+    color:black;
+    text-align:center;
+    padding:20px; 
+    font-size:60px;
+    position:relative;
+    z-index: 2;
+}
+
+nav {
+    background-color:beige;
+    padding:10px;
+    z-index:1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 2px;
+    display: flex;
+    justify-content: left;
+    z-index:1;
+}
+
+nav ul li {
+    margin: 0 15px;
+    z-index:1;
+}
+
+nav ul li a {
+    position: relative;
+    color:black;
+    padding: 5px 5px;
+    text-decoration:green;
+    font-weight:bold;
+    z-index:2;
+    display:block;
+    transition: background-color 0.4s ease;
+}
+
+h2 {
+    font-size: 40px;
+    background-color: beige;
+    text-align:center;
+    padding:20px;
+    position: relative;
+    z-index: 2;
+}
+
+h3 {
+   text-align:center;
+   position: relative;
+   z-index: 2;
+}
+p {
+   text-align: left;
+   position: relative;
+   z-index: 2;
+}
+.square {
+    width: 80%;
+    height: 100%;
+    background-color:beige;
+    position: absolute;
+    bottom:10%;
+    left: 10%;
+    z-index:1;
+}
+
+.rect {
+    width: 100%;
+    height: 100%;
+    background-color:beige;
+    position: absolute;
+    bottom:10%;
+    left: 0%;
+    z-index:1; 
+}
+
+nav ul li a:hover {
+    background-color: burlywood;
+}
+
+nav ul li a:hover::after {
+    position: relative;
+    background-color: #222;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap; /* Prevent text wrapping */
+    box-shadow: 10px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: block; /* Make the box visible */
+    opacity: 1; /* Fully visible */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+p {
+    z-index: 10;  
+}
+.long_rect {
+    width: 100%;
+    height: 180%;
+    background-color:beige;
+    position: absolute;
+    bottom:20%;
+    top: 0%;
+    left: 0%;
+    z-index:1;
+}
